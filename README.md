@@ -19,19 +19,39 @@ When working with open-source or unfamiliar codebases across multiple AI session
 
 ## Quick Install
 
-### Global install (available in all projects)
+### 方式一：让 Claude Code 自动安装（推荐）
+
+直接对 Claude Code 说：
+
+```
+帮我把 github.com/MARYCOMPLEX/ai-skills 中的 project-memory skill 安装到全局
+```
+
+Claude Code 会自动克隆仓库、复制 SKILL.md 到 `~/.claude/skills/project-memory/`。
+
+### 方式二：手动命令行安装
+
+#### Global install (available in all projects)
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/MARYCOMPLEX/ai-skills/main/install.sh | bash
 ```
 
-### Project-local install (only in current project)
+#### Project-local install (only in current project)
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/MARYCOMPLEX/ai-skills/main/install.sh | bash -s -- --project
 ```
 
 ### Uninstall
+
+对 Claude Code 说：
+
+```
+帮我把 ~/.claude/skills/project-memory/ 删掉
+```
+
+或者手动：
 
 ```bash
 # Remove global install
